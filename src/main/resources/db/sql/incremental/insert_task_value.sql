@@ -1,7 +1,7 @@
 --liquibase formatted sql
 --changeset init:0
 
-create table TASK
+create table DATA_BASE_VALUE
 (
 	id bigint not null,
 	quality int not null,
@@ -9,4 +9,4 @@ create table TASK
 )
 ;
 
-INSERT INTO TASK (id, quality) VALUES (1,10);
+INSERT INTO DATA_BASE_VALUE (id, quality) VALUES (1,10);

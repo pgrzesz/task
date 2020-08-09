@@ -1,6 +1,5 @@
-package com.example.task.endpoints;
+package com.example.task.controller;
 
-import com.example.task.TaskValueFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 class TaskController {
 
-    private final TaskValueFacade taskValueFacade;
+  private final TaskValueFacade taskValueFacade;
 
-    @GetMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public void connectValue() {
-        taskValueFacade.connectValue();
-    }
+  @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+  public void connectValue() {
+    taskValueFacade.get();
+  }
 }
 
